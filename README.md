@@ -56,6 +56,14 @@ Now open up a new REPL:
     test Goodbye, World!
     nil
     
+By default, `repload` excludes reloading namespaces starting with `clojure` and
+`repload`. You can override these prefixes with the following:
+
+    ;; add "myproject" as an ignored prefix
+    user=> (repload/add-exclude-prefix! "myproject")
+    ;; set "myproject" as the *only* ignored prefix
+    ;; (causing a *lot* of `clojure.core` vars to be reloaded)
+    user=> (repload/set-exclude-prefixes! ["myproject"])
 
 ## License
 
