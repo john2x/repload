@@ -44,6 +44,12 @@ Now open up a new REPL:
     nil
     user=> (require '[myproject.core :as mp])
     nil
+    user=> (source foo)
+    (defn foo
+      "I don't do a whole lot."
+      [x]
+      (println x "Hello, World!"))
+    nil
     user=> (foo "test")
     test Hello, World!
     nil
@@ -56,6 +62,12 @@ Now open up a new REPL:
     user=> (repload)
     Reloading myproject.core [foo]
     Reloading myproject.core with alias mp
+    nil
+    user=> (source foo)
+    (defn foo
+      "I don't do a whole lot."
+      [x]
+      (println x "Goodbye, World!"))
     nil
     user=> (foo "test")
     test Goodbye, World!
