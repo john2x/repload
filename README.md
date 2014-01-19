@@ -1,6 +1,6 @@
 # repload
 
-A Clojure utility function to reload all referred vars and aliased namespaces in a repl.
+A Clojure utility function to reload all referred vars and aliased namespaces in a REPL.
 
 ## Motivation
 
@@ -69,8 +69,12 @@ By default, `repload` excludes reloading namespaces starting with `clojure` and
 
     ;; add "myproject" as an ignored prefix
     user=> (repload/add-exclude-prefix! "myproject")
+    user=> (repload)
+    nil  ;; nothing reloaded
+
     ;; set "myproject" as the *only* ignored prefix
     ;; (causing a *lot* of `clojure.core` vars to be reloaded)
+    ;; (*not recommended*)
     user=> (repload/set-exclude-prefixes! ["myproject"])
 
 ## License
