@@ -4,7 +4,8 @@ A Clojure utility function to reload all referred vars and aliased namespaces in
 
 ## Motivation
 
-1. Restarting the REPL is excruciatingly slow
+1. Restarting the REPL is stupid
+2. Manually `:reload`ing referred vars and aliases is a pain
 2. [`tools.namespace`][tn] has too much [overhead][overhead] (e.g. state management)
 
 [tn]: https://github.com/clojure/tools.namespace
