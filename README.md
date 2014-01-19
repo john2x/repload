@@ -2,6 +2,14 @@
 
 A Clojure utility function to reload all referred vars and aliased namespaces in a repl.
 
+## Motivation
+
+1. Restarting the REPL is excruciatingly slow
+2. [`tools.namespace`][tn] has too much [overhead][overhead] (e.g. state management)
+
+[tn]: https://github.com/clojure/tools.namespace
+[overhead]: https://github.com/clojure/tools.namespace#reloading-code-preparing-your-application
+
 ## Install
 
 !["Leiningen version"](https://clojars.org/john2x/repload/latest-version.svg)
